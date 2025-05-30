@@ -11,6 +11,10 @@ import sys
 from kelimeEkleme import KelimeEkle
 from quizSayfasi import Quiz
 from ayarlarSayfasi import Setting
+from analizRaporuSayfasi import AnalizRapor
+from wordleSayfasi import WordleGame
+import subprocess
+import os
 
 class Kullanici(QtWidgets.QWidget):
     def __init__(self, userID, userName):
@@ -25,6 +29,7 @@ class Kullanici(QtWidgets.QWidget):
         
         self.infoLabel = QtWidgets.QLabel(self.userName + ', hoş geldiniz!')
         self.quizButton = QtWidgets.QPushButton('Quiz Yap')
+        self.playWordleButton = QtWidgets.QPushButton('Wordle Oyna')
         self.analysisButton = QtWidgets.QPushButton('Analiz Raporu Al')
         self.settingButton = QtWidgets.QPushButton('Ayarlar')
         self.addWord = QtWidgets.QPushButton('Kelime Ekle')
@@ -34,6 +39,7 @@ class Kullanici(QtWidgets.QWidget):
         vBox.addStretch()
         vBox.addWidget(self.infoLabel)
         vBox.addWidget(self.quizButton)
+        vBox.addWidget(self.playWordleButton)
         vBox.addWidget(self.analysisButton)
         vBox.addWidget(self.settingButton)
         vBox.addWidget(self.addWord)
@@ -50,8 +56,16 @@ class Kullanici(QtWidgets.QWidget):
         self.addWord.clicked.connect(self.addWordClick)
         self.quizButton.clicked.connect(self.quizButtonClick)
         self.settingButton.clicked.connect(self.settingButtonClick)
+        self.analysisButton.clicked.connect(self.analysisButtonClick)
+        self.playWordleButton.clicked.connect(self.playWordleButtonClick)
         
         self.show()
+        
+    def playWordleButtonClick(self):
+        #normalde direkt çağırırdık ama pyqt donabilir
+        subprocess.Popen([sys.executable, "wordleLauncher.py"])
+    def analysisButtonClick(self):
+        self.analiz = AnalizRapor(self.userName, self.userID)
         
     def settingButtonClick(self):
         self.setting = Setting()
