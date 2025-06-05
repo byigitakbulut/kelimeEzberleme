@@ -5,8 +5,6 @@ Created on Wed May 28 20:28:27 2025
 
 @author: yitik
 """
-
-# Gerekli PyQt5 modülleri içe aktarılıyor
 from PyQt5 import QtWidgets, QtCore
 import sys
 

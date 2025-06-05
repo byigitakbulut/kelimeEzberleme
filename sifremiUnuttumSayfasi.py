@@ -5,8 +5,6 @@ Created on Tue May 27 00:27:44 2025
 
 @author: yitik
 """
-
-# Gerekli modüller içe aktarılıyor
 from PyQt5 import QtWidgets
 import sys
 from MailDogrulama import Verification

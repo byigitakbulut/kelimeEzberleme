@@ -5,8 +5,6 @@ Created on Wed May 28 13:01:22 2025
 
 @author: yitik
 """
-
-# Gerekli modüller içe aktarılıyor
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QPixmap
 import sys

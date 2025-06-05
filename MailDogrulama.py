@@ -5,8 +5,6 @@ Created on Sun May 25 11:54:19 2025
 
 @author: yitik
 """
-
-# Gerekli PyQt5 modülleri içe aktarılıyor
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import pyqtSignal
 
