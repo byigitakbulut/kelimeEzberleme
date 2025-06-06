@@ -38,6 +38,7 @@ class Kullanici(QtWidgets.QWidget):
         self.analysisButton = QtWidgets.QPushButton('Analiz Raporu Al')
         self.settingButton = QtWidgets.QPushButton('Ayarlar')
         self.addWord = QtWidgets.QPushButton('Kelime Ekle')
+        self.exitButton = QtWidgets.QPushButton('Çıkış Yap')
 
         # Dikey kutu yerleşimi (VBox)
         vBox = QtWidgets.QVBoxLayout()
@@ -48,6 +49,7 @@ class Kullanici(QtWidgets.QWidget):
         vBox.addWidget(self.analysisButton)
         vBox.addWidget(self.settingButton)
         vBox.addWidget(self.addWord)
+        vBox.addWidget(self.exitButton)
         vBox.addStretch()
 
         # Yatay kutu yerleşimi (merkezde durması için)
@@ -64,8 +66,15 @@ class Kullanici(QtWidgets.QWidget):
         self.settingButton.clicked.connect(self.settingButtonClick)
         self.analysisButton.clicked.connect(self.analysisButtonClick)
         self.playWordleButton.clicked.connect(self.playWordleButtonClick)
+        self.exitButton.clicked.connect(self.exitButtonClick)
 
         self.show()
+        
+    def exitButtonClick(self):
+        # Giris penceresi açılır
+        from girisSayfasi import GirisYap
+        self.giris = GirisYap()
+        self.close()
 
     def playWordleButtonClick(self):
         # Wordle oyununu ayrı bir süreç olarak başlat (donmayı önler)
