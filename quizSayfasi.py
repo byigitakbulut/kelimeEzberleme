@@ -194,6 +194,7 @@ class Quiz(QtWidgets.QWidget):
         self.numLabel.setText("Test Bitti")
         self.engWordLabel.setText(f"Doğru Sayısı: {self.numTrue}/{self.numSoru}")
         self.resimLabel.clear()
+        self.wordSampleLabel.clear()
 
         # Test sonucu veritabanına yazılır
         self.cursor.execute(
