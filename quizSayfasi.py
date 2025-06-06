@@ -76,6 +76,7 @@ class Quiz(QtWidgets.QWidget):
         self.resimLabel = QtWidgets.QLabel()
         self.resimLabel.setPixmap(QPixmap('resimler/Unknown.jpeg'))
         self.engWordLabel = QtWidgets.QLabel('EngWord')
+        self.wordSampleLabel = QtWidgets.QLabel('EngWord Sample')
         self.turWordOptButton = QtWidgets.QPushButton('TurWordOpt1')
         self.turWordOptButton2 = QtWidgets.QPushButton('TurWordOpt2')
         self.turWordOptButton3 = QtWidgets.QPushButton('TurWordOpt3')
@@ -100,6 +101,14 @@ class Quiz(QtWidgets.QWidget):
         wordLabelHBox.addLayout(wordLabelVBox)
         wordLabelHBox.addStretch()
 
+        wordSampleVBox = QtWidgets.QVBoxLayout()
+        wordSampleVBox.addWidget(self.wordSampleLabel)
+
+        wordSampleHBox = QtWidgets.QHBoxLayout()
+        wordSampleHBox.addStretch()
+        wordSampleHBox.addLayout(wordSampleVBox)
+        wordSampleHBox.addStretch()
+
         optVBox = QtWidgets.QVBoxLayout()
         optVBox.addWidget(self.turWordOptButton)
         optVBox.addWidget(self.turWordOptButton2)
@@ -114,6 +123,7 @@ class Quiz(QtWidgets.QWidget):
         vBox.addStretch()
         vBox.addLayout(resimLabelHBox)
         vBox.addLayout(wordLabelHBox)
+        vBox.addLayout(wordSampleHBox)
         vBox.addLayout(optHBox)
         vBox.addStretch()
 
@@ -153,6 +163,13 @@ class Quiz(QtWidgets.QWidget):
             # Resim ve İngilizce kelime gösterilir
             self.engWordLabel.setText(self.curSoru[1])
             self.resimLabel.setPixmap(QPixmap(self.curSoru[3]))
+
+            # Kelimenin örnek cümlesinin databaseden çekimi
+            self.cursor.execute("SELECT * FROM WordSamples WHERE WordID = ?", (self.curSoru[0],))
+            sampleList = self.cursor.fetchone()
+            wordSample = sampleList[2]
+
+            self.wordSampleLabel.setText(wordSample)  # İngilizce örnek cümle yazımı
 
             # Doğru Türkçe + 2 yanlış seçenek hazırlanır
             self.cursor.execute(
@@ -224,5 +241,3 @@ class Quiz(QtWidgets.QWidget):
             """, (userID, wordID, 1, today.isoformat(), next_test_date.isoformat()))
 
         self.link.commit()
-
-
