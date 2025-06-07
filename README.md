@@ -37,7 +37,7 @@ Proje dizinine geçip uygulamayı başlatın
 
 bash
 cd kelimeEzberleme
-python main.py
+python girisSayfasi.py
 
 🧠 6 Sefer Tekrar Algoritması
 Bir kelimenin “öğrenildi” sayılması için kullanıcı, aşağıdaki zaman aralıklarında o kelimeyi doğru bilmelidir:
@@ -54,13 +54,13 @@ Not: Herhangi bir tekrar adımında kelime yanlış cevaplanırsa, süreç o kel
 
 📁 Proje Yapısı
 kelimeEzberleme/
-├── main.py              # Uygulamayı başlatan dosya
+├── girisSayfasi.py              # Uygulamayı başlatan dosya
 ├── database/
-│   └── ezber.db         # SQLite veritabanı
+│   └── yazilimYapimi.db         # SQLite veritabanı
 ├── ui/
 │   └── *.py             # PyQt5 arayüz ve kontrol dosyaları
 ├── assets/
-│   ├── images/          # Kelime görselleri
+│   ├── resimler/          # Kelime görselleri
 │   └── sounds/          # (opsiyonel) Ses dosyaları
 └── README.md            # Proje dökümanı
 
