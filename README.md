@@ -1,4 +1,4 @@
-## 📚 İngilizce Kelime Ezberleme Uygulaması (6 Sefer Tekrar Prensibi)
+## 📚 İngilizce Kelime Ezberleme Uygulaması (6 Sefer Tekrar Prensibi) 
 
 Bu proje, **“6 Sefer Tekrar Prensibi”**ni temel alarak kullanıcıların İngilizce kelimeleri kalıcı biçimde öğrenmesini hedefleyen bir masaüstü uygulamasıdır. Yazılım Mühendisliği dersi dönem projesi kapsamında geliştirilmiştir.
 
