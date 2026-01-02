@@ -70,8 +70,6 @@ kelimeEzberleme/
 
 │   ├── resimler/          # Kelime görselleri
 
-│   └── sounds/          # (opsiyonel) Ses dosyaları
-
 └── README.md            # Proje dökümanı
 
 
