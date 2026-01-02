@@ -53,16 +53,27 @@ Tekrar No	Zaman Aralığı
 Not: Herhangi bir tekrar adımında kelime yanlış cevaplanırsa, süreç o kelime için en başa döner.
 
 📁 Proje Yapısı
+
 kelimeEzberleme/
+
 ├── girisSayfasi.py              # Uygulamayı başlatan dosya
+
 ├── database/
+
 │   └── yazilimYapimi.db         # SQLite veritabanı
+
 ├── ui/
+
 │   └── *.py             # PyQt5 arayüz ve kontrol dosyaları
+
 ├── assets/
+
 │   ├── resimler/          # Kelime görselleri
+
 │   └── sounds/          # (opsiyonel) Ses dosyaları
+
 └── README.md            # Proje dökümanı
+
 
 👨‍💻 Geliştiriciler
 Büşra Tekdemir
