@@ -7,8 +7,8 @@ Bu proje, **“6 Sefer Tekrar Prensibi”**ni temel alarak kullanıcıların İn
 ### 🎯 Amaçlar
 - **Bilimsel Temel:** Unutma eğrisine karşı etkin öğrenme  
 - **Aralıklı Tekrar:** 6 farklı zaman diliminde doğru yanıt zorunluluğu  
-- **Kullanıcı Deneyimi:** Basit ve sezgisel arayüz  
-
+- **Kullanıcı Deneyimi:** Basit ve sezgisel arayüz
+  
 ---
 
 ### 🔧 Özellikler
@@ -49,6 +49,7 @@ Tekrar No	Zaman Aralığı
 4	3 ay sonra
 5	6 ay sonra
 6	1 yıl sonra
+
 
 Not: Herhangi bir tekrar adımında kelime yanlış cevaplanırsa, süreç o kelime için en başa döner.
 
