@@ -69,7 +69,7 @@ kelimeEzberleme/
 ├── ui/
 │   └── *.py                # PyQt5 arayüz ve kontrol dosyaları
 ├── assets/
-│   ├── resimler/           # Kelime görselleri
+│   └── resimler/           # Kelime görselleri
 └── README.md               # Proje dökümanı
 ```
 
