@@ -76,9 +76,9 @@ kelimeEzberleme/
 ---
 
 ### Geliştiriciler
-Büşra Tekdemir
 Hasan Yiğit Akbulut
 Ozan Korkmaz
+Büşra Tekdemir
 
 Notlar
 Bu proje eğitim amaçlı olarak geliştirilmiştir. Yeni özellikler ilerleyen sürümlerde eklenebilir. Geri bildirim ve katkılar için GitHub üzerinden iletişime geçebilirsiniz.
